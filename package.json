@@ -1,0 +1,27 @@
+{
+  "name": "gulp-add-src",
+  "version": "0.0.1",
+  "description": "Add more 'src' files at any point in the pipeline (gulp plugin)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urish/gulp-add-src"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "pipeline"
+  ],
+  "author": "Uri Shaked",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urish/gulp-add-src/issues"
+  },
+  "dependencies": {
+    "event-stream": "~3.1.5",
+    "through2": "~0.4.1"
+  }
+}
