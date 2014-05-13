@@ -20,13 +20,15 @@ Example:
 var gulp = require('gulp');
 var addsrc = require('gulp-add-src');
 var coffee = require('gulp-coffee');
-var minify = require('gulp-minify');
+var uglify = require('gulp-uglify');
 
-gulp.src('files/coffee/*.coffee')   // start with the .coffee files in the project
-  .pipe(coffee())                   // compiles coffee script
-  .pipe(addsrc('files/js/*.js'))    // we use addsrc to add our .js files to the mix
-  .pipe(minify())                   // we minify everything
-  .pipe(gulp.dest('dist'))          // and write to dist
+gulp.task('build', function () {
+  return gulp.src('files/coffee/*.coffee')   // start with the .coffee files in the project
+	.pipe(coffee())                          // compiles coffee script
+	.pipe(addsrc('files/js/*.js'))           // we use addsrc to add our .js files to the mix
+	.pipe(uglify())                          // we minify everything
+	.pipe(gulp.dest('dist'));                // and write to dist
+});
 ```
 
 License
