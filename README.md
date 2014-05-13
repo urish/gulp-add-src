@@ -8,7 +8,7 @@ Copyright (C) 2014, Uri Shaked <uri@urish.org>
 Installation
 ------------
 
-`npm install gulp-jshint --save-dev`
+`npm install gulp-add-src --save-dev`
 
 Usage
 -----
