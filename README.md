@@ -5,6 +5,8 @@ Add more 'src' files at any point in the pipeline
 
 Copyright (C) 2014, Uri Shaked <uri@urish.org>
 
+[![Build Status](https://travis-ci.org/urish/gulp-add-src.png?branch=master)](https://travis-ci.org/urish/gulp-add-src)
+
 Installation
 ------------
 

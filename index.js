@@ -1,9 +1,11 @@
+/* gulp-add-src / v0.1.0 / (c) 2014 Uri Shaked / MIT Licence */
+
 'use strict';
 var through = require('through2');
 var es = require('event-stream');
-var gulp = require('gulp');
+var vynil = require('vinyl-fs');
 
 module.exports = function addSrc() {
     var pass = through.obj();
-    return es.duplex(pass, es.merge(gulp.src.apply(gulp.src, arguments), pass));
+    return es.duplex(pass, es.merge(vynil.src.apply(vynil.src, arguments), pass));
 };
