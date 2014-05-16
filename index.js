@@ -1,4 +1,4 @@
-/* gulp-add-src / v0.1.0 / (c) 2014 Uri Shaked / MIT Licence */
+/* gulp-add-src / v0.1.1 / (c) 2014 Uri Shaked / MIT Licence */
 
 'use strict';
 var through = require('through2');

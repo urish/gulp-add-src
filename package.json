@@ -1,6 +1,6 @@
 {
   "name": "gulp-add-src",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add more 'src' files at any point in the pipeline (gulp plugin)",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "gulp",
-    "plugin",
+    "gulpplugin",
+    "gulpfriendly",
     "pipeline"
   ],
   "author": "Uri Shaked",
