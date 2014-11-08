@@ -22,9 +22,9 @@
     "url": "https://github.com/urish/gulp-add-src/issues"
   },
   "dependencies": {
-    "vinyl-fs": "*",
     "event-stream": "~3.1.5",
-    "through2": "~0.4.1"
+    "through2": "~0.4.1",
+    "vinyl-fs": "~0.3.11"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
