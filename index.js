@@ -2,10 +2,26 @@
 
 'use strict';
 var through = require('through2');
+var streamqueue = require('streamqueue');
 var es = require('event-stream');
-var vynil = require('vinyl-fs');
+var vinyl = require('vinyl-fs');
 
-module.exports = function addSrc() {
+function prepend() {
     var pass = through.obj();
-    return es.duplex(pass, es.merge(vynil.src.apply(vynil.src, arguments), pass));
+    return es.duplex(pass, streamqueue({ objectMode: true }, vinyl.src.apply(vinyl.src, arguments), pass));
+}
+
+function append() {
+	var pass = through.obj();
+	return es.duplex(pass, streamqueue({ objectMode: true }, pass, vinyl.src.apply(vinyl.src, arguments)));
+}
+
+var addSrc = function () {
+	var pass = through.obj();
+	return es.duplex(pass, es.merge(vinyl.src.apply(vinyl.src, arguments), pass));
 };
+
+addSrc.append  = append;
+addSrc.prepend = prepend;
+
+module.exports = addSrc;

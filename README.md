@@ -33,6 +33,12 @@ gulp.task('build', function () {
 });
 ```
 
+The order of files when the streams are merged is not guaranteed. If you need to preserve order and specifically append/prepend files,  you can use `addsrc.append` and `addsrc.prepend`, respectively, in place of just `addsrc` in the example above.
+
+As an example, this would be useful if you wanted to merge your `bower` scripts with your app scripts. You'd need your `bower` scripts to maintain their order (the `bower` scripts themselves) and make sure they come before your app scripts. In this case, you'd use `addsrc.prepend`.
+
+Because of the unpredicabilty of `addsrc` alone, it's recommended to use one of the append/prepend variants. The original is only left in place for legacy reasons.
+
 License
 ----
 
