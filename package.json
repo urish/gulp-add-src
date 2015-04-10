@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/urish/gulp-add-src"
