@@ -35,7 +35,9 @@ gulp.task('build', function () {
 
 If you want add SRC to begining of the SRC array, you can use `addsrc.prepend`.
 Or if you want to add SRC to end of the SRC array, you can use `addsrc.append`.
-Respectively instead of addsrc:
+Respectively instead of addsrc.
+
+Example use addsrc.append and addsrc.prepend:
 ```js
 var gulp = require('gulp');
 var addsrc = require('gulp-add-src');
@@ -51,8 +53,6 @@ gulp.task('build.angular', function () {
 	.pipe(gulp.dest('dist'));                       // and write to dist
 });
 ```
-
-Example use addsrc.append and addsrc.prepend:
 
 As an example, this would be useful if you wanted to merge your `bower` scripts with your app scripts. You'd need your `bower` scripts to maintain their order (the `bower` scripts themselves) and make sure they come before your app scripts. In this case, you'd use `addsrc.prepend`.
 
