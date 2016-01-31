@@ -33,7 +33,26 @@ gulp.task('build', function () {
 });
 ```
 
-The order of files when the streams are merged is not guaranteed. If you need to preserve order and specifically append/prepend files,  you can use `addsrc.append` and `addsrc.prepend`, respectively, in place of just `addsrc` in the example above.
+If you want add SRC to begining of the SRC array, you can use `addsrc.prepend`.
+Or if you want to add SRC to end of the SRC array, you can use `addsrc.append`.
+Respectively instead of addsrc:
+```js
+var gulp = require('gulp');
+var addsrc = require('gulp-add-src');
+var coffee = require('gulp-coffee');
+var uglify = require('gulp-uglify');
+
+gulp.task('build.angular', function () {
+  return gulp.src('files/coffee/*.coffee')          // start with the .coffee files in the project
+	.pipe(coffee())                                 // compiles coffee script
+	.pipe(addsrc.prepend('files/js/constants.js'))  // we use `addsrc.prepend` to add our .js files to begining of the SRC array
+	.pipe(addsrc.append('files/js/conflict.js'))    // we use `addsrc.append` to add our .js files to end of the SRC array
+	.pipe(uglify())                                 // we minify everything
+	.pipe(gulp.dest('dist'));                       // and write to dist
+});
+```
+
+Example use addsrc.append and addsrc.prepend:
 
 As an example, this would be useful if you wanted to merge your `bower` scripts with your app scripts. You'd need your `bower` scripts to maintain their order (the `bower` scripts themselves) and make sure they come before your app scripts. In this case, you'd use `addsrc.prepend`.
 
