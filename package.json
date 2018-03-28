@@ -1,6 +1,6 @@
 {
   "name": "gulp-add-src",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Add more 'src' files at any point in the pipeline (gulp plugin)",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "event-stream": "~3.1.5",
     "streamqueue": "^0.1.1",
     "through2": "~0.4.1",
-    "vinyl-fs": "~0.3.11"
+    "vinyl-fs": "~3.0.2"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
