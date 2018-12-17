@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.0.0 - 2018-03-28
-- Make node 8 LTS compatible ([#15](https://github.com/urish/gulp-add-src/pull/15))
+- Upgrade Vinyl for Node 8 LTS compatibility ([#15](https://github.com/urish/gulp-add-src/pull/15))
 
 ## 0.2.0 - 2014-11-08
 
